@@ -28,6 +28,7 @@ class TelaInicial extends Component{
 
           <Text style={styles.titulos}> Professor Responsável: </Text>
           <Text style={styles.nomes}> Maria Patricia Lourenço Barros </Text>
+          <Text style={styles.nomes}> Joabis Nobre Martins </Text>
         </View>
 
         <Button onPress={() => {Actions.glossario()}} title="Visualizar Glossário" color="#359830" />
