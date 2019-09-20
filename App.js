@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+
+import {Router, Stack, Scene} from 'react-native-router-flux';
 
 import TelaInicial from './src/components/TelaInicial';
 import Glossario from './src/components/Glossario';
+import VisualizaTermo from './src/components/VisualizaTermo';
 
 class App extends Component{
   render(){
@@ -10,9 +12,30 @@ class App extends Component{
     console.disableYellowBox = true;
 
     return(
-        <View>
-          <Text> Tela Inicial </Text>
-        </View>
+      <Router>
+        <Stack key="root">
+          <Scene key="telaInicial" component={TelaInicial} title="Login" hideNavBar />
+
+          <Scene
+            key="glossario"
+            component={Glossario}
+            title="Termos Técnicos"
+            navBarButtonColor="#fff"
+            navigationBarStyle={{backgroundColor: '#359830'}}
+            titleStyle={{color: '#fff'}}
+          />
+
+          <Scene
+            key="visualizaTermo"
+            component={VisualizaTermo}
+            title=""
+            navBarButtonColor="#fff"
+            navigationBarStyle={{backgroundColor: '#359830'}}
+            titleStyle={{color: '#fff'}}
+          />
+
+        </Stack>
+      </Router>
     );
   }
 }
