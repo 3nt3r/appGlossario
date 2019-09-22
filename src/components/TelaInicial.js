@@ -26,12 +26,12 @@ class TelaInicial extends Component{
           <Text style={styles.nomes}> Rúben José </Text>
           <Text style={styles.nomes}> Bruno Angelim </Text>
 
-          <Text style={styles.titulos}> Professor Responsável: </Text>
+          <Text style={styles.titulos}> Professores Responsáveis: </Text>
           <Text style={styles.nomes}> Maria Patricia Lourenço Barros </Text>
           <Text style={styles.nomes}> Joabis Nobre Martins </Text>
         </View>
 
-        <Button onPress={() => {Actions.glossario()}} title="Visualizar Glossário" color="#359830" />
+        <Button onPress={() => {Actions.glossario()}} title="Glossário" color="#359830" />
 
       </View>
     );
@@ -48,12 +48,15 @@ const styles = StyleSheet.create({
     height: 73
   },
   containerLogo: {
-    flex: 3,
+    flex: 2,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: 20
   },
   containerInformacoes: {
-    flex: 6
+    flex: 6,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   titulos: {
     fontSize: 18,
