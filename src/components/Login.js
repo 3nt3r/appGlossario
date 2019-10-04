@@ -20,7 +20,7 @@ class Login extends Component{
         this.setState({carregamento: false});
       })
       .catch(erro => {
-        this.setState({erro: "Verifique seu e-mail ou senha."});
+        this.setState({erro: "Verifique seu e-mail e/ou senha."});
         this.setState({carregamento: false});
       });
     }else{

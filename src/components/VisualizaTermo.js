@@ -28,14 +28,18 @@ class VisualizaTermo extends Component{
         </View>
 
         <View style={styles.containerInformacoes}>
-          <Text style={styles.titulos}> Produzido por: </Text>
+          <Text style={styles.nomeTermo}>{this.props.termo}</Text>
+          <Text style={styles.descricao} numberOfLines={7}> {this.props.descricao} </Text>
+          <Text style={styles.titulos}> Interprete: </Text>
+          <Text style={styles.nomes}> {this.props.pessoa} </Text>
+          {/* <Text style={styles.titulos}> Produzido por: </Text>
           <Text style={styles.nomes}> {this.props.pessoa} </Text>
 
           <Text style={styles.titulos}> Termo apresentado: </Text>
           <Text style={styles.nomes}> {this.props.termo} </Text>
 
           <Text style={styles.titulos}> Descrição: </Text>
-          <Text style={styles.nomes}> {this.props.descricao} </Text>
+          <Text style={styles.nomes}> {this.props.descricao} </Text> */}
         </View>
 
         <Button title="Voltar" onPress={() => {Actions.pop()}} color="#359830" />
@@ -53,21 +57,30 @@ const styles = StyleSheet.create({
   containerVideo: {
     flex: 3
   },
+  nomeTermo: {
+    fontWeight: "bold",
+    marginTop: 40,
+    marginLeft: 20,
+    fontSize: 24
+  },
+  descricao: {
+    fontSize: 18,
+    marginLeft: 20,
+    marginTop: 10
+  },
   containerInformacoes: {
     flex: 5
   },
   titulos: {
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: 'bold',
     color: '#359830',
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 10
+    marginLeft: 20,
+    marginTop: 10
   },
   nomes: {
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 10
+    fontSize: 18,
+    marginLeft: 20,
   }
 });
 
