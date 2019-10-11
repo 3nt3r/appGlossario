@@ -8,6 +8,7 @@ import Glossario from './src/components/Glossario';
 import VisualizaTermo from './src/components/VisualizaTermo';
 import Login from './src/components/Login';
 import InsereTermos from './src/components/InsereTermos';
+import SaibaMais from "./src/components/SaibaMais";
 
 class App extends Component{
 
@@ -52,6 +53,15 @@ class App extends Component{
             key="visualizaTermo"
             component={VisualizaTermo}
             title=""
+            navBarButtonColor="#fff"
+            navigationBarStyle={{backgroundColor: '#359830'}}
+            titleStyle={{color: '#fff'}}
+          />
+
+          <Scene
+            key="saibaMais"
+            component={SaibaMais}
+            title="Mais informações"
             navBarButtonColor="#fff"
             navigationBarStyle={{backgroundColor: '#359830'}}
             titleStyle={{color: '#fff'}}

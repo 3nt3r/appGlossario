@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, StyleSheet, Button, StatusBar} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity, StatusBar} from 'react-native';
 
 import {Actions} from 'react-native-router-flux';
 
@@ -18,21 +18,12 @@ class TelaInicial extends Component{
 
         <View style={styles.containerInformacoes}>
           <Text style={styles.titulos}> Glossário Libras - Termos Técnicos </Text>
-
-          <Text style={styles.nomes}> Curso Tecnológico em Sistemas para Internet </Text>
-          <Text style={styles.titulos}> Aplicativo Desenvolvido por: </Text>
-
-          <Text style={styles.nomes}> Jefferson Barros </Text>
-          <Text style={styles.nomes}> Rúben José </Text>
-          <Text style={styles.nomes}> Bruno Angelim </Text>
-
-          <Text style={styles.titulos}> Professores Responsáveis: </Text>
-          <Text style={styles.nomes}> Maria Patricia Lourenço Barros </Text>
-          <Text style={styles.nomes}> Joabis Nobre Martins </Text>
+          <TouchableOpacity onPress={() => {Actions.glossario()}} style={styles.botao}><Text style={styles.rotulo}>Glossário</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => {Actions.login()}} style={styles.botao}><Text style={styles.rotulo}>Administrador</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => {Actions.saibaMais()}} style={styles.botao}><Text style={styles.rotulo}>Saiba mais</Text></TouchableOpacity>
         </View>
 
-        <Button onPress={() => {Actions.glossario()}} title="Glossário" color="#359830" />
-
+        
       </View>
     );
   }
@@ -41,25 +32,40 @@ class TelaInicial extends Component{
 const styles = StyleSheet.create({
   containerPrincipal: {
     flex: 1,
-    backgroundColor: '#ccc'
+    backgroundColor: '#ccc',
+    justifyContent: "center",
+    alignItems: "center"
   },
   logo: {
     width: 263,
     height: 73
   },
+  rotulo:{
+    color:"#fff",
+  },  
+  botao: {
+    alignItems: "center",
+    backgroundColor: "#359830",
+    width: 220,
+    padding: 10,
+    borderRadius: 4,
+    marginTop: 10
+  },
   containerLogo: {
     flex: 2,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "flex-end",
     paddingTop: 20
   },
   containerInformacoes: {
     flex: 6,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'flex-start',
+    marginTop: 90
   },
   titulos: {
-    fontSize: 18,
+    fontSize: 20,
+    marginBottom: 20,
     fontWeight: 'bold',
     color: '#359830',
     textAlign: 'center',

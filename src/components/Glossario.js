@@ -4,7 +4,6 @@ import {View, Text, StyleSheet, Image,ScrollView ,SafeAreaView, FlatList, Toucha
 import {Actions} from 'react-native-router-flux';
 import firebase from 'firebase';
 import Lupa from "../imagens/lupa.png";
-import { bold } from 'colorette';
 class Glossario extends Component{
 
   constructor(props){
