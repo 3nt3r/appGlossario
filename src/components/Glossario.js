@@ -108,15 +108,6 @@ class Glossario extends Component{
             renderItem={({item}, index) => this.renderizaLinhas({item}, index)}
             keyExtractor={item => item.video}
           />
-
-          <View style={styles.itemAdministrador}>
-            <TouchableOpacity
-              onPress={() => {Actions.login()}}
-              underlayColor="white"
-            >
-              <Text style={styles.title}> Administrador </Text>
-            </TouchableOpacity>
-          </View>
         </ScrollView>
       );
     }else{
