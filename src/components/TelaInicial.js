@@ -12,18 +12,32 @@ class TelaInicial extends Component{
 
         <StatusBar hidden={false} backgroundColor='#359830'/>
 
-        <View style={styles.containerLogo}>
-          <Image source={Logo} style={styles.logo} />
+        <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+
+          <View style={styles.containerLogo}>
+            <Image source={Logo} style={styles.logo} />
+          </View>
+
+          <View style={styles.containerInformacoes}>
+            <Text style={styles.titulos}> Glossário Libras </Text>
+            <Text style={styles.titulos}> Termos Técnicos </Text>
+            <Text style={styles.titulos}> Tecnologia em Alimentos </Text>
+
+            <TouchableOpacity onPress={() => {Actions.glossario()}} style={styles.botao}>
+              <Text style={styles.rotulo}> Glossário </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {Actions.login()}} style={styles.botao}>
+              <Text style={styles.rotulo}> Administrador </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {Actions.saibaMais()}} style={styles.botao}>
+              <Text style={styles.rotulo}> Saiba mais </Text>
+            </TouchableOpacity>
+          </View>
+
         </View>
 
-        <View style={styles.containerInformacoes}>
-          <Text style={styles.titulos}> Glossário Libras - Termos Técnicos </Text>
-          <TouchableOpacity onPress={() => {Actions.glossario()}} style={styles.botao}><Text style={styles.rotulo}>Glossário</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {Actions.login()}} style={styles.botao}><Text style={styles.rotulo}>Administrador</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {Actions.saibaMais()}} style={styles.botao}><Text style={styles.rotulo}>Saiba mais</Text></TouchableOpacity>
-        </View>
-
-        
       </View>
     );
   }
@@ -41,38 +55,30 @@ const styles = StyleSheet.create({
     height: 73
   },
   rotulo:{
-    color:"#fff",
-  },  
+    color:"#fff"
+  },
   botao: {
     alignItems: "center",
     backgroundColor: "#359830",
     width: 220,
-    padding: 10,
+    padding: 15,
     borderRadius: 4,
-    marginTop: 10
+    marginTop: 15
   },
   containerLogo: {
-    flex: 2,
     alignItems: 'center',
     justifyContent: "flex-end",
-    paddingTop: 20
+    paddingBottom: 25
   },
   containerInformacoes: {
-    flex: 6,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginTop: 90
+    justifyContent: 'flex-start'
   },
   titulos: {
     fontSize: 20,
-    marginBottom: 20,
+    marginBottom: 10,
     fontWeight: 'bold',
     color: '#359830',
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-  nomes: {
     textAlign: 'center',
     paddingTop: 10,
     paddingBottom: 10

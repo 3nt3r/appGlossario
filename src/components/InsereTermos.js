@@ -73,7 +73,7 @@ class InsereTermos extends Component{
 
             <View style={styles.containerInputsEspaco}>
               <TextInput
-                placeholder="Termo"
+                placeholder="Nome do Termo"
                 style={styles.inputs}
                 value={this.props.termo}
                 onChangeText={texto => {this.setState({termo: texto})}}
@@ -101,7 +101,7 @@ class InsereTermos extends Component{
 
             <View style={styles.containerInputsEspaco}>
               <TextInput
-                placeholder="Pessoa no Vídeo"
+                placeholder="Intérprete"
                 style={styles.inputs}
                 value={this.props.pessoaVideo}
                 onChangeText={texto => {this.setState({pessoaVideo: texto})}}

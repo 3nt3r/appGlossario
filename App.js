@@ -36,7 +36,6 @@ class App extends Component{
           <Scene
             key="telaInicial"
             component={TelaInicial}
-            title="Login"
             hideNavBar
           />
 
@@ -52,7 +51,6 @@ class App extends Component{
           <Scene
             key="visualizaTermo"
             component={VisualizaTermo}
-            title=""
             navBarButtonColor="#fff"
             navigationBarStyle={{backgroundColor: '#359830'}}
             titleStyle={{color: '#fff'}}
@@ -61,7 +59,7 @@ class App extends Component{
           <Scene
             key="saibaMais"
             component={SaibaMais}
-            title="Mais informações"
+            title="Saiba Mais"
             navBarButtonColor="#fff"
             navigationBarStyle={{backgroundColor: '#359830'}}
             titleStyle={{color: '#fff'}}
@@ -79,7 +77,7 @@ class App extends Component{
           <Scene
             key="insereTermos"
             component={InsereTermos}
-            title="Insira um Novo Termo"
+            title="Inserir Novo Termo"
             navBarButtonColor="#fff"
             navigationBarStyle={{backgroundColor: '#359830'}}
             titleStyle={{color: '#fff'}}

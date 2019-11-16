@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Image, StyleSheet, Button, TextInput, ActivityIndicator} from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
 
+import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
 import firebase from 'firebase';
 
@@ -28,9 +28,11 @@ class Login extends Component{
       this.setState({carregamento: false});
     }
   }
+
   async continuarLogado(){
     await AsyncStorage.setItem("logado", "true");
   }
+
   constructor(props){
     super(props);
     this.state = {
@@ -49,10 +51,15 @@ class Login extends Component{
       );
     }else{
       return(
-        <Button onPress={() => {this.loginAdministrador(this.state.email, this.state.senha)}} title="Entrar" color="#359830" />
+        <Button onPress={() => {
+          this.loginAdministrador(this.state.email, this.state.senha)}}
+          title="Entrar"
+          color="#359830"
+        />
       );
     }
   }
+
   async componentDidMount(){
     await AsyncStorage.getItem("logado").then(logado => {
       if(logado){
@@ -63,6 +70,7 @@ class Login extends Component{
       }
     });
   }
+
   render(){
     if(this.state.carregamentoTela){
       return(
@@ -100,7 +108,6 @@ class Login extends Component{
             />
 
             <Text style={styles.erro}> {this.state.erro} </Text>
-
           </View>
 
           <View>

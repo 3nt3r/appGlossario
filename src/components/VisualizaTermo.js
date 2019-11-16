@@ -32,14 +32,6 @@ class VisualizaTermo extends Component{
           <Text style={styles.descricao} numberOfLines={7}> {this.props.descricao} </Text>
           <Text style={styles.titulos}> Interprete: </Text>
           <Text style={styles.nomes}> {this.props.pessoa} </Text>
-          {/* <Text style={styles.titulos}> Produzido por: </Text>
-          <Text style={styles.nomes}> {this.props.pessoa} </Text>
-
-          <Text style={styles.titulos}> Termo apresentado: </Text>
-          <Text style={styles.nomes}> {this.props.termo} </Text>
-
-          <Text style={styles.titulos}> Descrição: </Text>
-          <Text style={styles.nomes}> {this.props.descricao} </Text> */}
         </View>
 
         <Button title="Voltar" onPress={() => {Actions.pop()}} color="#359830" />

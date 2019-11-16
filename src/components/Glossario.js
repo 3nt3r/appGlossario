@@ -3,7 +3,9 @@ import {View, Text, StyleSheet, Image,ScrollView ,SafeAreaView, FlatList, Toucha
 
 import {Actions} from 'react-native-router-flux';
 import firebase from 'firebase';
+
 import Lupa from "../imagens/lupa.png";
+
 class Glossario extends Component{
 
   constructor(props){
@@ -21,7 +23,7 @@ class Glossario extends Component{
       if(snapshot.val() == null){
         this.setState({dados: [{tipo: 1, mensagem: "Nenhum termo encontrado."}], carregamento: true});
       }else{
-        let vetorEmOrdemAlfabetica = Object.values(snapshot.val()).sort((a, b) => { 
+        let vetorEmOrdemAlfabetica = Object.values(snapshot.val()).sort((a, b) => {
           if (a.termo > b.termo)
             return 1
           else if(a.termo < b.termo)
@@ -79,9 +81,8 @@ class Glossario extends Component{
     let textoParaPesquisa = text.toLowerCase()
     let termoParaComparacao = ""
     let resultados = [];
-    //percorre o array com todos o dados
+
     this.state.dados.forEach(elemento => {
-      // guarda a quantidade de letras do termo corrente correspodente ao tamanho da string pesquisada
       for(i=0;i<textoParaPesquisa.length;i++){
         termoParaComparacao += elemento.termo[i].toLowerCase();
       }
@@ -123,11 +124,9 @@ class Glossario extends Component{
     return(
       <View style={styles.containerPrincipal}>
         <SafeAreaView style={styles.container}>
-
           <View>
             {this.renderPrincipal()}
           </View>
-
         </SafeAreaView>
       </View>
     );
@@ -154,13 +153,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     color: '#fff'
-  },
-  itemAdministrador: {
-    backgroundColor: '#359830',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    borderRadius: 8
   },
   letra: {
     marginLeft: 20,
@@ -199,7 +191,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic'
   },
   icone: {
-    width: 24, 
+    width: 24,
     height: 24,
     marginLeft: 10,
     marginRight: 10,
